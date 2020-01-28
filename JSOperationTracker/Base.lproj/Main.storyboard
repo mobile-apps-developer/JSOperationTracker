@@ -1,24 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vE7-6h-Vbf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Operations-->
+        <scene sceneID="rp5-p4-r5e">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="OperationsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vE7-6h-Vbf" customClass="OperationsViewController" customModule="JumboApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZwQ-8P-4IG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a6F-cK-2hN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="817"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vE7-6h-Vbf" id="XHW-Af-dL8"/>
+                                    <outlet property="delegate" destination="vE7-6h-Vbf" id="XKe-s3-5Tt"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1nS-wM-NQe" firstAttribute="bottom" secondItem="a6F-cK-2hN" secondAttribute="bottom" constant="1" id="EkW-PN-FdU"/>
+                            <constraint firstItem="a6F-cK-2hN" firstAttribute="top" secondItem="1nS-wM-NQe" secondAttribute="top" id="YLV-5g-Xsf"/>
+                            <constraint firstItem="a6F-cK-2hN" firstAttribute="leading" secondItem="1nS-wM-NQe" secondAttribute="leading" id="jAI-9T-5FG"/>
+                            <constraint firstItem="1nS-wM-NQe" firstAttribute="trailing" secondItem="a6F-cK-2hN" secondAttribute="trailing" id="r2i-al-FUP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1nS-wM-NQe"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Operations" id="hyi-8N-yci"/>
+                    <connections>
+                        <outlet property="operationsTableView" destination="a6F-cK-2hN" id="W22-6b-LmN"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kL-EF-ciU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1855" y="139"/>
         </scene>
     </scenes>
 </document>
