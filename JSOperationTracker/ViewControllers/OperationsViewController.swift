@@ -4,6 +4,7 @@ import WebKit
 class OperationsViewController: UIViewController, JSEventsListener {
     // MARK: - IBOutlets
     @IBOutlet var operationsTableView: UITableView!
+    @IBOutlet var loader: UIActivityIndicatorView!
 
     // MARK: - Variables
     private var jsOperationManager: JSOperationManager?
@@ -12,16 +13,15 @@ class OperationsViewController: UIViewController, JSEventsListener {
     // MARK: - View's Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Register cell
-        operationsTableView.register(UINib(nibName: Constants.OPERATION_CELL, bundle: nil), forCellReuseIdentifier: Constants.OPERATION_CELL)
-
         // Download the javascript file
+        loader.startAnimating()
         downloadJSScript()
     }
 
     // MARK: - Private Methods
     private func downloadJSScript() {
         NetworkManager().getData(from: Endpoints.jsScriptEndPoint) { [weak self] data, error in
+            self?.loader.stopAnimating()git 
             guard let self = self else { return }
             if let _data = data, let jsScript = String(data: _data, encoding: .utf8) {
                 self.evaluteJSScript(jsScript: jsScript)

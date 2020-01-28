@@ -5,7 +5,7 @@ struct Endpoints {
 }
 
 struct Constants {
-    static let NUMBER_OF_OPERATIONS = 20
+    static let NUMBER_OF_OPERATIONS = 15
     static let SCRIPT_MESSAGE = "operation"
     static let START_OPERATION_JS_FUNCTION = "startOperation"
     static let OPERATION_CELL = "OperationCell"
