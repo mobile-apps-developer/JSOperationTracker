@@ -1,7 +1,7 @@
 import Foundation
 
 struct Endpoints {
-    static let jsScriptEndPoint = URL(string: "https://www.dropbox.com/s/utqx8qha367mlqa/tasks.js?dl=1")!
+    static let jsScriptEndPoint = URL(string: "https://www.dropbox.com/s/p5mbfwcthfztcfw/test-task.js?dl=1")!
 }
 
 struct Constants {
