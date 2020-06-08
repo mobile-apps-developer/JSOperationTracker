@@ -28,3 +28,7 @@ This controller is responsible for starting the operations and showing the statu
 - Go to your project root directory at mac terminal
 - Run `pod install`
 - Close the exiting project and open it with `JSOperationTracker.xcworkspace` 
+
+
+# Demo
+![Alt Text](https://github.com/mobile-apps-developer/JSOperationTracker/blob/master/demo.gif)
